@@ -74,11 +74,15 @@ class Logger : ILogger
 {
     public void Error(string message)
     {
+        Console.ForegroundColor = ConsoleColor.Red;
         WriteLine($"Logger: {message}");
+        Console.ResetColor(); 
     }
 
     public void Event(string message)
     {
+        Console.ForegroundColor = ConsoleColor.Blue;
         WriteLine($"Logger: {message}");
+        Console.ResetColor();
     }
 }
